@@ -4,7 +4,7 @@ version: 2.1
 orbs:
   bun-orb: cmgriffing/bun-orb@0.0.28
 jobs:
-  build-project:
+  build:
     docker:
       - image: cimg/node:21.6.2
     steps:
@@ -29,7 +29,47 @@ jobs:
           key: nuxt3-public-cache-{{ .Branch }}
           paths:
             - ./.output/public
+
+  deploy:
+    docker:
+      - image: cimg/node:21.6.2
+    steps:
+      - checkout
+      - bun-orb/setup
+      - restore_cache:
+          keys:
+            - v1-bun-deps-{{ checksum "bun.lockb" }}
+            - v1-bun-deps-
+      - run:
+          name: Install Dependencies
+          command: bun install
+      - save_cache:
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
+          paths:
+            - ~/.bun/install/cache
+            - node_modules
+      - run:
+          name: Nuxt3 Build
+          command: bun run generate
+      - save_cache:
+          key: nuxt3-public-cache-{{ .Branch }}
+          paths:
+            - ./.output/public
+      - run:
+          name: Deploy to Cloudflare Pages
+          command: bunx wrangler pages publish dist --project-name=cybercoder-nishant.dev
 workflows:
-  build:
+  main:
     jobs:
-      - build-project
+      - build
+      - hold:
+          type: approval
+          requires:
+            - build
+      - deploy:
+          requires:
+            - hold
+          filters:
+            branches:
+              only:
+                - main
