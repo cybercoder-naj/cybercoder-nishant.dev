@@ -1,0 +1,32 @@
+# This config was automatically generated from your source code
+# Stacks detected: deps:node:.
+version: 2.1
+orbs:
+  bun: ksylvest/bun@1.0.1
+jobs:
+  build-project:
+    docker:
+      - image: cimg/node:21.6.2
+    steps:
+      - checkout
+      - bun/install
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: bun install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Nuxt3 Build
+          command: bun run generate
+      - save_cache:
+          key: nuxt3-public-cache-{{ .Branch }}
+          paths:
+            - ./.output/public
+workflows:
+  build:
+    jobs:
+      - build-project
