@@ -2,23 +2,26 @@
 # Stacks detected: deps:node:.
 version: 2.1
 orbs:
-  bun: ksylvest/bun@1.0.1
+  bun-orb: cmgriffing/bun-orb@0.0.28
 jobs:
   build-project:
     docker:
       - image: cimg/node:21.6.2
     steps:
       - checkout
-      - bun/install
+      - bun-orb/setup
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          keys:
+            - v1-bun-deps-{{ checksum "bun.lockb" }}
+            - v1-bun-deps-
       - run:
           name: Install Dependencies
           command: bun install
       - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
           paths:
-            - ./node_modules
+            - ~/.bun/install/cache
+            - node_modules
       - run:
           name: Nuxt3 Build
           command: bun run generate
