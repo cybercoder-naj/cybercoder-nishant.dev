@@ -25,10 +25,6 @@ jobs:
       - run:
           name: Nuxt3 Build
           command: bun run generate
-      - save_cache:
-          key: nuxt3-public-cache-{{ .Branch }}
-          paths:
-            - ./.output/public
 
   deploy:
     docker:
@@ -51,13 +47,9 @@ jobs:
       - run:
           name: Nuxt3 Build
           command: bun run generate
-      - save_cache:
-          key: nuxt3-public-cache-{{ .Branch }}
-          paths:
-            - ./.output/public
       - run:
           name: Deploy to Cloudflare Pages
-          command: bunx wrangler pages publish dist --project-name=cybercoder-nishant.dev
+          command: npx wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev
 workflows:
   main:
     jobs:
