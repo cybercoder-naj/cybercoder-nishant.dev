@@ -49,7 +49,36 @@ jobs:
           command: bun run generate
       - run:
           name: Deploy to Cloudflare Pages
+<<<<<<< HEAD
+          command: bun x wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev
+
+  deploy_preview:
+    docker:
+      - image: cimg/node:21.6.2
+    steps:
+      - checkout
+      - bun-orb/setup
+      - restore_cache:
+          keys:
+            - v1-bun-deps-{{ checksum "bun.lockb" }}
+            - v1-bun-deps-
+      - run:
+          name: Install Dependencies
+          command: bun install
+      - save_cache:
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
+          paths:
+            - ~/.bun/install/cache
+            - node_modules
+      - run:
+          name: Nuxt3 Build
+          command: bun run generate
+      - run:
+          name: Deploy to Cloudflare Pages
+          command: bun x wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev --branch=$CIRCLE_BRANCH
+=======
           command: npx wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev
+>>>>>>> origin/main
 workflows:
   main:
     jobs:
@@ -69,3 +98,13 @@ workflows:
             branches:
               only:
                 - main
+<<<<<<< HEAD
+      - deploy_preview:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore:
+                - main
+=======
+>>>>>>> origin/main
