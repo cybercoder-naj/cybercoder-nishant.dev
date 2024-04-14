@@ -3,7 +3,6 @@
 version: 2.1
 orbs:
   bun-orb: cmgriffing/bun-orb@0.0.28
-
 jobs:
   build:
     docker:
@@ -50,6 +49,7 @@ jobs:
           command: bun run generate
       - run:
           name: Deploy to Cloudflare Pages
+<<<<<<< HEAD
           command: bun x wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev
 
   deploy_preview:
@@ -76,6 +76,9 @@ jobs:
       - run:
           name: Deploy to Cloudflare Pages
           command: bun x wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev --branch=$CIRCLE_BRANCH
+=======
+          command: npx wrangler pages deploy .output/public --project-name=cybercoder-nishant-dev
+>>>>>>> origin/main
 workflows:
   main:
     jobs:
@@ -95,6 +98,7 @@ workflows:
             branches:
               only:
                 - main
+<<<<<<< HEAD
       - deploy_preview:
           requires:
             - build
@@ -102,3 +106,5 @@ workflows:
             branches:
               ignore:
                 - main
+=======
+>>>>>>> origin/main
