@@ -96,6 +96,8 @@ workflows:
               only:
                 - main
       - deploy_preview:
+          requires:
+            - build
           filters:
             branches:
               ignore:
