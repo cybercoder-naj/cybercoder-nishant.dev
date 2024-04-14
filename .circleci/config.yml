@@ -95,7 +95,6 @@ workflows:
             branches:
               only:
                 - main
-<<<<<<< HEAD
       - deploy_preview:
           requires:
             - build
@@ -103,5 +102,3 @@ workflows:
             branches:
               ignore:
                 - main
-=======
->>>>>>> origin/main
