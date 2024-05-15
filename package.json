@@ -1,20 +1,17 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "nuxt": "^3.11.0",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
-  },
-  "devDependencies": {
-    "wrangler": "^3.34.2"
+    "astro": "^4.8.4",
+    "@astrojs/check": "^0.7.0",
+    "typescript": "^5.4.5"
   }
 }
