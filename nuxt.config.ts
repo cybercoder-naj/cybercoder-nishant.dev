@@ -8,5 +8,14 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-26',
 
-  modules: ['@nuxtjs/tailwindcss']
+  modules: ['@nuxtjs/tailwindcss', "@nuxt/fonts"],
+
+  font: {
+    families: [
+      {
+        name: 'Tomorrow',
+        provider: 'google'
+      }
+    ]
+  }
 });

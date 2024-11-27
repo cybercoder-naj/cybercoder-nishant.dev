@@ -1,3 +1,6 @@
 <template>
-  <div>Nishant's new website.</div>
+  <div>
+    <NavBar />
+    <Home />
+  </div>
 </template>
