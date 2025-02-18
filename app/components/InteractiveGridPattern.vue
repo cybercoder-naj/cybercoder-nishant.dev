@@ -12,14 +12,14 @@ interface InteractiveGridPatternProps {
   squares?: [number, number];
 }
 
-const props = withDefaults(defineProps<InteractiveGridPatternProps>(), {
-  width: 40,
-  height: 40,
-  squares: () => [24, 24]
-});
-
-const { width, height, squares, className, squaresClassName, ...restProps } =
-  props;
+const {
+  width = 40,
+  height = 40,
+  squares = [24, 24],
+  className,
+  squaresClassName,
+  ...restProps
+} = defineProps<InteractiveGridPatternProps>();
 
 const horizontal = computed(() => squares[0]);
 const vertical = computed(() => squares[1]);
@@ -32,7 +32,7 @@ const gridWidth = computed(() => width * horizontal.value);
 const gridHeight = computed(() => height * vertical.value);
 
 function getX(index: number) {
-  return (index % horizontal.value) * width;
+  return (index % horizontal.value) * width + gridWidth.value / 2;
 }
 
 function getY(index: number) {
