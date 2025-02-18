@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+/*
+ * Interactive Grid Pattern from Inspira-UI
+ * https://inspira-ui.com/components/backgrounds/interactive-grid-pattern
+ */
+
 interface InteractiveGridPatternProps {
   className?: HTMLAttributes['class'];
   squaresClassName?: HTMLAttributes['class'];
