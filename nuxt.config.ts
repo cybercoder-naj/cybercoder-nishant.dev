@@ -13,7 +13,12 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/base.css'],
 
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'motion-v/nuxt'],
+  modules: [
+    '@nuxt/icon',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
+    'motion-v/nuxt'
+  ],
 
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
