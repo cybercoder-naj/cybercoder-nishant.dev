@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { HTMLAttributes } from 'vue';
+
 /*
  * Interactive Grid Pattern from Inspira-UI
  * https://inspira-ui.com/components/backgrounds/interactive-grid-pattern
