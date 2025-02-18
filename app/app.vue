@@ -1,12 +1,16 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
-const mode = ref(true);
+const lightTheme = ref(false);
+
+watch(lightTheme, () => {
+  colorMode.preference = lightTheme.value ? 'light' : 'dark';
+});
 </script>
 
 <template>
   <header>
-    <nav class="fixed">
-      <MySwitch v-model="mode" />
+    <nav class="fixed z-20">
+      <MyThemeSwitcher v-model="lightTheme" />
     </nav>
   </header>
 
