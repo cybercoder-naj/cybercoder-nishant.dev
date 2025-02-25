@@ -10,22 +10,24 @@ watch(lightTheme, () => {
 <template>
   <header>
     <nav class="fixed z-20">
-      <MyThemeSwitcher v-model="lightTheme" />
+      <!-- <MyThemeSwitcher v-model="lightTheme" /> -->
     </nav>
   </header>
 
   <main>
-    <div class="relative grid h-screen place-content-center overflow-hidden">
-      <p
-        class="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white">
-        Interactive Grid Pattern
-      </p>
+    <div class="relative flex px-40 h-screen overflow-hidden justify-center items-center w-full">
+      <h1 class="z-10 whitespace-pre-wrap text-5xl font-medium  tracking-tighter text-black dark:text-white">
+        I am
+        <InspiraTextHyper text="The Cybercoder" />
+      </h1>
 
-      <InspiraGrid
-        :class="[
-          '[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]',
-          'inset-0 h-[200%] skew-y-12'
-        ]" />
+      <Icon name="material-symbols:keyboard-double-arrow-down-rounded"
+        class="text-white absolute bottom-20 size-16 animate-bounce" />
+
+      <InspiraGrid :class="[
+        '[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]',
+        'inset-0 h-[200%] skew-y-12'
+      ]" />
     </div>
   </main>
 </template>

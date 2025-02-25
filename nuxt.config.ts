@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
   ],
 
   tailwindcss: {

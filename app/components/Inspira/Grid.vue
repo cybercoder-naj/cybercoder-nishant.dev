@@ -4,6 +4,10 @@ import type { HTMLAttributes } from 'vue';
 /*
  * Interactive Grid Pattern from Inspira-UI
  * https://inspira-ui.com/components/backgrounds/interactive-grid-pattern
+ * 
+ * Modified by: cybercoder-naj
+ * Modifications:
+ *   - Changed hover color effect to electric-blue
  */
 
 interface InteractiveGridPatternProps {
@@ -48,7 +52,7 @@ const svgClass = computed(() =>
 function getRectClass(index: number) {
   return cn(
     'stroke-gray-400/30 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000',
-    hoveredSquare.value === index ? 'fill-gray-300/30' : 'fill-transparent',
+    hoveredSquare.value === index ? 'fill-electric-blue/30' : 'fill-transparent',
     squaresClassName
   );
 }
@@ -63,20 +67,9 @@ function handleMouseLeave() {
 </script>
 
 <template>
-  <svg
-    :width="gridWidth"
-    :height="gridHeight"
-    v-bind="restProps"
-    :class="svgClass">
-    <rect
-      v-for="(_, index) in totalSquares"
-      :key="index"
-      :x="getX(index)"
-      :y="getY(index)"
-      :width="width"
-      :height="height"
-      :class="getRectClass(index)"
-      @mouseenter="handleMouseEnter(index)"
+  <svg :width="gridWidth" :height="gridHeight" v-bind="restProps" :class="svgClass">
+    <rect v-for="(_, index) in totalSquares" :key="index" :x="getX(index)" :y="getY(index)" :width="width"
+      :height="height" :class="getRectClass(index)" @mouseenter="handleMouseEnter(index)"
       @mouseleave="handleMouseLeave" />
   </svg>
 </template>
