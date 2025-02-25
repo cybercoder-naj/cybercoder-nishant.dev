@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     'motion-v/nuxt',
+    '@nuxt/fonts'
   ],
 
   tailwindcss: {
@@ -30,5 +31,18 @@ export default defineNuxtConfig({
     fallback: 'dark',
     classPrefix: '',
     classSuffix: ''
+  },
+
+  fonts: {
+    families: [
+      {
+        name: 'Sora',
+        provider: 'google'
+      },
+      {
+        name: 'Fira Code',
+        provider: 'google'
+      }
+    ]
   }
 });

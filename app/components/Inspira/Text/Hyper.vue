@@ -6,6 +6,7 @@
  * Modified by: cybercoder-naj
  * Modifications:
  *   - Changed flex to inline-flex on the parent divs
+ *   - Removed the padding py-2
  */
 
 import { ref, computed, watch } from "vue";
@@ -76,11 +77,11 @@ if (props.animateOnLoad) {
 </script>
 
 <template>
-  <div class="inline-flex scale-100 cursor-default overflow-hidden py-2" @mouseenter="triggerAnimation">
+  <div class="inline-flex cursor-default overflow-hidden" @mouseenter="triggerAnimation">
     <div class="inline-flex">
       <Motion v-for="(letter, i) in displayText" :key="i" as="span"
-        :class="cn(letter === ' ' ? 'w-3' : '', $props.class)" class="inline-block font-mono"
-        :initial="{ opacity: 0, y: -10 }" :animate="{ opacity: 1, y: 0 }" :delay="i * (duration / (text.length * 10))">
+        :class="cn(letter === ' ' ? 'w-3' : '', $props.class)" class="inline-block" :initial="{ opacity: 0, y: -10 }"
+        :animate="{ opacity: 1, y: 0 }" :delay="i * (duration / (text.length * 10))">
         {{ letter.toUpperCase() }}
       </Motion>
     </div>
