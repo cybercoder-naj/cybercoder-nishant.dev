@@ -19,8 +19,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <SeoKit site-name="Nishant Aanjaney Jalan" />
-
   <header>
     <nav class="fixed z-20">
       <!-- <MyThemeSwitcher v-model="lightTheme" /> -->
