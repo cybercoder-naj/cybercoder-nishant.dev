@@ -9,7 +9,13 @@ export default defineNuxtConfig({
   app: {
     rootAttrs: {
       id: 'app'
-    }
+    },
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      titleTemplate: 'Nishant Aanjaney Jalan | %s',
+    },
   },
   css: ['~/assets/css/base.css'],
 

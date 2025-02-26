@@ -43,9 +43,9 @@ export default <Partial<Config>>{
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        "electric-blue": '#00F0FF',
-        "neon-pink": '#FF13F0',
-        "neon-green": '#13FF00',
+        'electric-blue': '#00F0FF',
+        'neon-pink': '#FF13F0',
+        'neon-green': '#13FF00'
       },
       borderRadius: {
         xl: 'calc(var(--radius) + 4px)',
