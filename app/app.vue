@@ -7,11 +7,20 @@ watch(lightTheme, () => {
 });
 
 useHead({
-  title: 'Portfolio',
+  title: 'Portfolio'
+});
+
+useSeoMeta({
+  description:
+    "I'm Nishant Aanjaney Jalan (aka cybercoder). I'm a full-stack web and android developer. Explore my experiences, my skills and my projects.",
+  keywords:
+    'cybercoder, Nishant Aanjaney Jalan, software engineer, web developer, android developer, full-stack developer, portfolio'
 });
 </script>
 
 <template>
+  <SeoKit site-name="Nishant Aanjaney Jalan" />
+
   <header>
     <nav class="fixed z-20">
       <!-- <MyThemeSwitcher v-model="lightTheme" /> -->
@@ -19,8 +28,10 @@ useHead({
   </header>
 
   <main class="font-sora text-black dark:text-white">
-    <div class="relative flex h-screen w-full items-center justify-center overflow-hidden px-40">
-      <h2 class="z-10 whitespace-pre-wrap text-4xl tracking-tighter sm:text-6xl">
+    <div
+      class="relative flex h-screen w-full items-center justify-center overflow-hidden px-40">
+      <h2
+        class="z-10 whitespace-pre-wrap text-4xl tracking-tighter sm:text-6xl">
         I am
         <div
           class="bg-gradient inline-block bg-gradient-to-tr from-neon-pink to-electric-blue bg-clip-text text-transparent">
@@ -33,10 +44,11 @@ useHead({
         <!-- <Icon name="material-symbols:keyboard-double-arrow-down-rounded" class="size-12 animate-bounce" /> -->
       </div>
 
-      <InspiraGrid :class="[
-        '[mask-image:radial-gradient(320px_circle_at_center,white,transparent)]',
-        'skew-y-12'
-      ]" />
+      <InspiraGrid
+        :class="[
+          '[mask-image:radial-gradient(320px_circle_at_center,white,transparent)]',
+          'skew-y-12'
+        ]" />
     </div>
   </main>
 </template>

@@ -14,8 +14,8 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      titleTemplate: 'Nishant Aanjaney Jalan | %s',
-    },
+      titleTemplate: 'Nishant Aanjaney Jalan | %s'
+    }
   },
   css: ['~/assets/css/base.css'],
 
@@ -24,7 +24,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     'motion-v/nuxt',
-    '@nuxt/fonts'
+    '@nuxt/fonts',
+    '@nuxtjs/seo'
   ],
 
   tailwindcss: {
@@ -50,5 +51,11 @@ export default defineNuxtConfig({
         provider: 'google'
       }
     ]
+  },
+
+  site: {
+    url: 'cybercoder-nishant.dev',
+    indexable: true,
+    name: "Nishant Aanjaney Jalan's Portfolio"
   }
 });
