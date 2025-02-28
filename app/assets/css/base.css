@@ -1,10 +1,7 @@
 body {
-  height: 100vh;
-  height: 100svh;
-  width: 100vw;
-  overflow: hidden scroll;
+  @apply max-h-full w-screen overflow-hidden;
 }
 
 #app {
-  @apply h-full bg-white dark:bg-black;
+  @apply h-lvh max-h-full overflow-y-scroll bg-white dark:bg-black;
 }

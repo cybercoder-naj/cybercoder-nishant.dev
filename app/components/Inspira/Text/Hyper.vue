@@ -37,7 +37,7 @@ const displayText = ref(props.text.split(''));
 const iterations = ref(0);
 
 function getRandomLetter() {
-  return alphabets[Math.floor(Math.random() * alphabets.length)];
+  return alphabets[Math.floor(Math.random() * alphabets.length)]!;
 }
 function triggerAnimation() {
   iterations.value = 0;
@@ -51,7 +51,7 @@ const { pause, resume } = useIntervalFn(
         l === ' '
           ? l
           : i <= iterations.value
-            ? props.text[i]
+            ? props.text[i]!
             : getRandomLetter()
       );
       iterations.value += 0.1;
@@ -89,7 +89,7 @@ if (props.animateOnLoad) {
         v-for="(letter, i) in displayText"
         :key="i"
         as="span"
-        :class="cn(letter === ' ' ? 'w-3' : '', $props.class)"
+        :class="cn(letter === ' ' ? 'w-3' : '', props.class)"
         class="inline-block"
         :initial="{ opacity: 0, y: -10 }"
         :animate="{ opacity: 1, y: 0 }"
