@@ -9,8 +9,11 @@
     </h2>
 
     <div class="absolute bottom-20 flex flex-col items-center gap-4">
-      <i class="text-lg md:text-2xl">More coming soon!</i>
-      <!-- <Icon name="material-symbols:keyboard-double-arrow-down-rounded" class="size-12 animate-bounce" /> -->
+      <a href="#about" class="animate-bounce">
+        <Icon
+          name="material-symbols:keyboard-double-arrow-down-rounded"
+          class="size-12" />
+      </a>
     </div>
 
     <InspiraGrid

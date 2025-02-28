@@ -27,8 +27,8 @@ useSeoMeta({
 
   <main class="font-sora text-black dark:text-white">
     <div class="relative">
-      <Jumbotron class="sticky top-0 h-screen w-full" />
-      <AboutMe class="relative z-10 h-screen w-full" />
+      <Jumbotron id="" class="sticky top-0 h-screen w-full" />
+      <AboutMe id="about" class="relative z-10 h-screen w-full" />
     </div>
   </main>
 </template>
