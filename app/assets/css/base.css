@@ -3,5 +3,5 @@ body {
 }
 
 #app {
-  @apply h-lvh max-h-full overflow-y-scroll scroll-smooth bg-white dark:bg-black;
+  @apply h-svh max-h-full overflow-y-scroll scroll-smooth bg-white dark:bg-black;
 }

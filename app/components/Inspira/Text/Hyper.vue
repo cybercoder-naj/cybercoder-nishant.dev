@@ -13,27 +13,22 @@ import { ref, computed, watch } from 'vue';
 import { useIntervalFn } from '@vueuse/core';
 import { Motion } from 'motion-v';
 
-const props = defineProps({
-  text: {
-    type: String,
-    required: true
-  },
-  duration: {
-    type: Number,
-    default: 0.8
-  },
-  class: {
-    type: String,
-    default: ''
-  },
-  animateOnLoad: {
-    type: Boolean,
-    default: true
-  }
-});
+type Props = {
+  text: string;
+  duration?: number;
+  textClass?: string;
+  animateOnLoad?: boolean;
+};
+
+const {
+  text,
+  duration = 0.8,
+  textClass = '',
+  animateOnLoad = true
+} = defineProps<Props>();
 
 const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const displayText = ref(props.text.split(''));
+const displayText = ref(text.split(''));
 const iterations = ref(0);
 
 function getRandomLetter() {
@@ -46,20 +41,16 @@ function triggerAnimation() {
 
 const { pause, resume } = useIntervalFn(
   () => {
-    if (iterations.value < props.text.length) {
+    if (iterations.value < text.length) {
       displayText.value = displayText.value.map((l, i) =>
-        l === ' '
-          ? l
-          : i <= iterations.value
-            ? props.text[i]!
-            : getRandomLetter()
+        l === ' ' ? l : i <= iterations.value ? text[i]! : getRandomLetter()
       );
       iterations.value += 0.1;
     } else {
       pause();
     }
   },
-  computed(() => props.duration / (props.text.length * 10))
+  computed(() => duration / (text.length * 10))
 );
 
 function startAnimation() {
@@ -68,14 +59,14 @@ function startAnimation() {
 }
 
 watch(
-  () => props.text,
+  () => text,
   newText => {
     displayText.value = newText.split('');
     triggerAnimation();
   }
 );
 
-if (props.animateOnLoad) {
+if (animateOnLoad) {
   triggerAnimation();
 }
 </script>
@@ -89,7 +80,7 @@ if (props.animateOnLoad) {
         v-for="(letter, i) in displayText"
         :key="i"
         as="span"
-        :class="cn(letter === ' ' ? 'w-3' : '', props.class)"
+        :class="cn(letter === ' ' ? 'w-3' : '', textClass)"
         class="inline-block"
         :initial="{ opacity: 0, y: -10 }"
         :animate="{ opacity: 1, y: 0 }"
