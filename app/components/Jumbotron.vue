@@ -19,7 +19,7 @@ const { navbarHeight } = useNavbarHeight();
     </h2>
 
     <div class="absolute bottom-20 flex flex-col items-center gap-4">
-      <a href="#about" class="animate-bounce">
+      <a href="#about" class="animate-bounce" aria-label="Scroll down">
         <Icon
           name="material-symbols:keyboard-double-arrow-down-rounded"
           class="size-12" />

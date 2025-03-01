@@ -11,7 +11,7 @@ function toggleSideMenu() {
 }
 
 function isAboveMd() {
-  return window.innerWidth >= 768;
+  return import.meta.client && window.innerWidth >= 768;
 }
 </script>
 
