@@ -11,7 +11,8 @@ const lightTheme = defineModel<boolean>();
     :class="{
       'from-blue-400 via-blue-200 to-blue-400': lightTheme,
       'from-slate-800 via-slate-600 to-slate-800': !lightTheme
-    }">
+    }"
+    aria-label="Toggle between light and dark theme">
     <div
       class="relative flex h-full items-center overflow-hidden rounded-full px-0.5">
       <!-- Sun and moon icons -->
