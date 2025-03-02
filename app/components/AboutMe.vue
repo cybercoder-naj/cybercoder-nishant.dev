@@ -24,8 +24,14 @@ const { navbarHeight } = useNavbarHeight();
       </div>
 
       <div class="max-w-[512px] text-2xl">
-        <h1>Hi there! 👋🏼 My real name is Nishant Aanjaney Jalan.</h1>
-        <div>
+        <h1 class="inline">
+          Hi there! 👋🏼 My real name is
+          <strong
+            class="bg-gradient-to-tr from-neon-pink to-electric-blue bg-clip-text text-transparent"
+            >Nishant Aanjaney Jalan</strong
+          >.
+        </h1>
+        <div class="inline">
           I'm a Full-stack developer, and also a
           <InspiraTextFlipWords
             :words="['Teacher', 'Student', 'Musician']"

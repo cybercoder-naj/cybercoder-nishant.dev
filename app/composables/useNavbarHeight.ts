@@ -8,7 +8,6 @@ export default function useNavbarHeight() {
 
   onMounted(() => {
     navbarHeight.value = navbar.value?.clientHeight ?? 0;
-    console.log('navbarHeight', navbar.value?.clientHeight);
   });
 
   return {
