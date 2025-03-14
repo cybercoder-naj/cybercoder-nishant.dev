@@ -14,7 +14,7 @@ const { remainingHeight } = useNavbarHeight();
 </script>
 
 <template>
-  <header class="font-sora text-black dark:text-white">
+  <header class="font-sans text-black dark:text-white">
     <nav
       class="fixed z-20 flex w-full justify-center bg-white dark:bg-black"
       ref="navbar">

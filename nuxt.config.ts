@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -17,21 +19,19 @@ export default defineNuxtConfig({
       titleTemplate: 'Nishant Aanjaney Jalan | %s'
     }
   },
-  css: ['~/assets/css/base.css'],
+
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [tailwindcss()]
+  },
 
   modules: [
     '@nuxt/icon',
     '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss',
     'motion-v/nuxt',
     '@nuxt/fonts',
     '@nuxtjs/seo'
   ],
-
-  tailwindcss: {
-    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
-    viewer: false
-  },
 
   colorMode: {
     preference: 'dark',
