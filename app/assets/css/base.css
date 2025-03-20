@@ -1,7 +1,0 @@
-body {
-  @apply max-h-full w-screen overflow-hidden;
-}
-
-#app {
-  @apply h-svh max-h-full overflow-y-scroll scroll-smooth bg-white dark:bg-black;
-}

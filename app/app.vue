@@ -14,7 +14,7 @@ const { remainingHeight } = useNavbarHeight();
 </script>
 
 <template>
-  <header class="font-sora text-black dark:text-white">
+  <header class="font-serif text-black dark:text-white">
     <nav
       class="fixed z-20 flex w-full justify-center bg-white dark:bg-black"
       ref="navbar">
@@ -23,7 +23,7 @@ const { remainingHeight } = useNavbarHeight();
     </nav>
   </header>
 
-  <main class="font-sora text-black dark:text-white">
+  <main class="font-serif text-black dark:text-white">
     <div class="relative">
       <Jumbotron id="" class="sticky h-screen w-full" />
       <AboutMe
