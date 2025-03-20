@@ -25,32 +25,13 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
 
-  modules: [
-    '@nuxt/icon',
-    '@nuxtjs/color-mode',
-    'motion-v/nuxt',
-    '@nuxt/fonts',
-    '@nuxtjs/seo'
-  ],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode', 'motion-v/nuxt', '@nuxtjs/seo'],
 
   colorMode: {
     preference: 'dark',
     fallback: 'dark',
     classPrefix: '',
     classSuffix: ''
-  },
-
-  fonts: {
-    families: [
-      {
-        name: 'Sora',
-        provider: 'google'
-      },
-      {
-        name: 'Fira Code',
-        provider: 'google'
-      }
-    ]
   },
 
   site: {

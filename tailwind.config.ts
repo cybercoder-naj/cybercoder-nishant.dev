@@ -43,8 +43,6 @@ export default <Partial<Config>>{
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        'electric-blue': '#00F0FF',
-        'neon-pink': '#FF13F0',
         'neon-green': '#13FF00'
       },
       borderRadius: {
@@ -52,26 +50,6 @@ export default <Partial<Config>>{
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
-      },
-      fontFamily: {
-        sora: ['"Sora"', 'sans-serif'],
-        fira: ['"Fira Code"', 'monospace']
-      },
-      animation: {
-        gradient: 'transition-gradient 3s ease infinite'
-      },
-      keyframes: {
-        'transition-gradient': {
-          '0%': {
-            'background-position': '0% 50%'
-          },
-          '50%': {
-            'background-position': '100% 50%'
-          },
-          '100%': {
-            'background-position': '0% 50%'
-          }
-        }
       }
     }
   },

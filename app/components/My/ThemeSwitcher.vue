@@ -7,7 +7,7 @@ const lightTheme = defineModel<boolean>();
 <template>
   <Switch
     v-model="lightTheme"
-    class="h-6 w-12 rounded-full bg-gradient-to-b"
+    class="h-6 w-12 rounded-full bg-linear-to-b/srgb"
     :class="{
       'from-blue-400 via-blue-200 to-blue-400': lightTheme,
       'from-slate-800 via-slate-600 to-slate-800': !lightTheme
@@ -42,7 +42,7 @@ const lightTheme = defineModel<boolean>();
         class="relative z-10 h-full flex-1"
         :class="lightTheme ? 'opacity-100' : 'opacity-0'">
         <div
-          class="absolute right-0.5 top-1 flex w-1/2 flex-col justify-center">
+          class="absolute top-1 right-0.5 flex w-1/2 flex-col justify-center">
           <div class="relative flex translate-y-1/2 justify-center gap-0.5">
             <div class="size-1 rounded-full bg-white"></div>
             <div class="size-1 rounded-full bg-white"></div>
@@ -59,7 +59,7 @@ const lightTheme = defineModel<boolean>();
       <!-- Dark themed decoration -->
       <Icon
         name="material-symbols-light:star"
-        class="absolute left-1 top-0.5 size-3 text-white transition-opacity delay-0 duration-300 ease-in-out"
+        class="absolute top-0.5 left-1 size-3 text-white transition-opacity delay-0 duration-300 ease-in-out"
         :class="!lightTheme ? 'opacity-60' : 'opacity-0'" />
 
       <Icon
@@ -69,7 +69,7 @@ const lightTheme = defineModel<boolean>();
 
       <Icon
         name="material-symbols-light:circle"
-        class="absolute right-[45%] top-1 size-1.5 text-white transition-opacity delay-0 duration-300 ease-in-out"
+        class="absolute top-1 right-[45%] size-1.5 text-white transition-opacity delay-0 duration-300 ease-in-out"
         :class="!lightTheme ? 'opacity-60' : 'opacity-0'" />
 
       <Icon

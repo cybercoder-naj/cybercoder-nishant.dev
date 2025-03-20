@@ -9,23 +9,18 @@
  *   - Removed the padding py-2
  */
 
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, type HTMLAttributes } from 'vue';
 import { useIntervalFn } from '@vueuse/core';
 import { Motion } from 'motion-v';
 
 type Props = {
   text: string;
   duration?: number;
-  textClass?: string;
+  textClass?: HTMLAttributes['class'];
   animateOnLoad?: boolean;
 };
 
-const {
-  text,
-  duration = 0.8,
-  textClass = '',
-  animateOnLoad = true
-} = defineProps<Props>();
+const { textClass, text, duration = 800, animateOnLoad } = defineProps<Props>();
 
 const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const displayText = ref(text.split(''));
@@ -73,15 +68,20 @@ if (animateOnLoad) {
 
 <template>
   <div
-    class="inline-flex cursor-default overflow-hidden"
+    :class="
+      cn(
+        'from-neon-pink to-electric-blue flex scale-100 cursor-default overflow-hidden bg-linear-to-tr/srgb bg-clip-text py-2',
+        textClass
+      )
+    "
     @mouseenter="triggerAnimation">
-    <div class="inline-flex">
+    <div class="flex">
       <Motion
         v-for="(letter, i) in displayText"
         :key="i"
         as="span"
-        :class="cn(letter === ' ' ? 'w-3' : '', textClass)"
-        class="inline-block"
+        :class="cn(letter === ' ' ? 'w-3' : '', 'text-transparent', textClass)"
+        class="inline-block font-mono"
         :initial="{ opacity: 0, y: -10 }"
         :animate="{ opacity: 1, y: 0 }"
         :delay="i * (duration / (text.length * 10))">

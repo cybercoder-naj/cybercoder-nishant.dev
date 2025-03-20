@@ -5,7 +5,7 @@ const { navbarHeight } = useNavbarHeight();
 <template>
   <div class="bg-white dark:bg-black">
     <div
-      class="sticky h-1 animate-gradient bg-gradient-to-r from-neon-pink to-electric-blue bg-[length:200%_200%]"
+      class="animate-gradient from-neon-pink to-electric-blue sticky h-1 bg-linear-to-r/srgb bg-[length:200%_200%]"
       :style="{ top: `${navbarHeight}px` }"></div>
 
     <div
@@ -17,17 +17,17 @@ const { navbarHeight } = useNavbarHeight();
           class="size-36 rounded-full md:size-52" />
 
         <div
-          class="image-circle size-44 border-r-2 border-electric-blue md:size-60"></div>
+          class="image-circle border-electric-blue size-44 border-r-2 md:size-60"></div>
 
         <div
-          class="image-circle reverse size-52 border-l-2 border-t-2 border-neon-pink md:size-72"></div>
+          class="image-circle reverse border-neon-pink size-52 border-t-2 border-l-2 md:size-72"></div>
       </div>
 
       <div class="max-w-[512px] text-2xl">
         <h1 class="inline">
           Hi there! 👋🏼 My real name is
           <strong
-            class="bg-gradient-to-tr from-neon-pink to-electric-blue bg-clip-text text-transparent"
+            class="from-neon-pink to-electric-blue bg-linear-to-tr/srgb bg-clip-text text-transparent"
             >Nishant Aanjaney Jalan</strong
           >.
         </h1>
@@ -47,7 +47,7 @@ const { navbarHeight } = useNavbarHeight();
 
 <style scoped>
 .image-circle {
-  @apply absolute left-1/2 top-1/2 rounded-full;
+  @apply absolute top-1/2 left-1/2 rounded-full;
   transform: translate(-50%, -50%) rotate(0deg);
   animation: my-spin 2s linear infinite;
 }
