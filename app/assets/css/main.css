@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Sora:wght@100..800&display=swap');
 
 @import 'tailwindcss';
+@import './inspira.css' layer(base);
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -12,6 +13,11 @@
 
   --font-mono: 'Fira Code', monospace;
   --font-serif: 'Sora', sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: calc(var(--radius));
+  --radius-xl: calc(var(--radius) + 4px);
 
   @keyframes wave {
     0%,
