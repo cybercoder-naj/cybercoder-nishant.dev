@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -8,7 +10,8 @@ export default defineNuxtConfig({
 
   app: {
     rootAttrs: {
-      id: 'app'
+      id: 'app',
+      class: 'h-dvh'
     },
     head: {
       htmlAttrs: {
@@ -18,7 +21,10 @@ export default defineNuxtConfig({
     }
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/index.css'],
+  vite: {
+    plugins: [tailwindcss()]
+  },
 
   modules: ['@nuxtjs/seo'],
 

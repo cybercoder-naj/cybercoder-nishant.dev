@@ -12,5 +12,16 @@ useSeoMeta({
 </script>
 
 <template>
-  <div></div>
+  <div
+    class="bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-500">
+    <div class="mx-auto max-w-[1440px]">
+      <header>
+        <Navbar />
+      </header>
+
+      <main></main>
+
+      <footer></footer>
+    </div>
+  </div>
 </template>
