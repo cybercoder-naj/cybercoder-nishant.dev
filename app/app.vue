@@ -15,7 +15,7 @@ useSeoMeta({
   <div class="bg-background text-foreground h-svh">
     <div class="mx-auto max-w-[1440px]">
       <header>
-        <Navbar />
+        <NavBar />
       </header>
 
       <main></main>
