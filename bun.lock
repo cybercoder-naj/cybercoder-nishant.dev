@@ -10,7 +10,7 @@
         "@nuxtjs/seo": "2.2.0",
         "@tailwindcss/vite": "^4.0.14",
         "@vueuse/core": "^13.0.0",
-        "motion-v": "^0.13.1",
+        "motion-v": "^1.0.2",
         "nuxt": "^3.15.0",
         "tailwindcss": "^4.0.14",
         "vue": "^3.5.13",
@@ -1004,7 +1004,7 @@
 
     "motion-utils": ["motion-utils@12.5.0", "", {}, "sha512-+hFFzvimn0sBMP9iPxBa9OtRX35ZQ3py0UHnb8U29VD+d8lQ8zH3dTygJWqK7av2v6yhg7scj9iZuvTS0f4+SA=="],
 
-    "motion-v": ["motion-v@0.13.1", "", { "dependencies": { "@vueuse/core": "^10.0.0", "framer-motion": "12.5.0", "hey-listen": "^1.0.8", "motion-dom": "^12.5.0" }, "peerDependencies": { "vue": ">=3.0.0" } }, "sha512-Hs1p0he2Ee6mhLMkTpB08cvjWT/24b+spJ28O+KzHqFgx34BDyFUIhDJvi6i7QF3BjS2ukgbHQdE3Uy5nVngUA=="],
+    "motion-v": ["motion-v@1.0.2", "", { "dependencies": { "@vueuse/core": "^10.0.0", "framer-motion": "12.5.0", "hey-listen": "^1.0.8", "motion-dom": "^12.5.0" }, "peerDependencies": { "vue": ">=3.0.0" } }, "sha512-Qn/X9Mx/5g02rjvpGtn5fht2OWTAnZoed4vLXgjM0lJgkSEtoGuadwEVypbCVH3WW1AHsns2k2okKAjpDrKu6A=="],
 
     "mrmime": ["mrmime@2.0.1", "", {}, "sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ=="],
 
