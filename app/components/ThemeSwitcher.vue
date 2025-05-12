@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const isLightTheme = useState('isLightTheme', () => false);
+const colorMode = useColorMode();
+const isLightTheme = computed(() => colorMode.preference === 'light');
+
+const toggleTheme = () => {
+  colorMode.preference = isLightTheme.value ? 'dark' : 'light';
+};
 
 const gradient = computed(() => {
   return isLightTheme.value
@@ -16,7 +21,8 @@ const gradient = computed(() => {
     role="switch"
     tabindex="0"
     type="button"
-    :aria-checked="!isLightTheme">
+    :aria-checked="!isLightTheme"
+    @click="toggleTheme">
     <div
       class="relative flex h-full items-center overflow-hidden rounded-full px-0.5">
       <!-- Sun and moon icons -->

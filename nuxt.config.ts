@@ -26,11 +26,18 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
 
-  modules: ['@nuxtjs/seo', '@nuxt/icon'],
+  modules: ['@nuxtjs/seo', '@nuxt/icon', '@nuxtjs/color-mode'],
 
   site: {
     url: 'cybercoder-nishant.dev',
     indexable: true,
     name: "Nishant Aanjaney Jalan's Portfolio"
+  },
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+    classPrefix: '',
+    classSuffix: ''
   }
 });
