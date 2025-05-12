@@ -12,8 +12,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div
-    class="bg-primary-50 dark:bg-primary-950 text-primary-800 dark:text-primary-500">
+  <div class="bg-background text-foreground h-svh">
     <div class="mx-auto max-w-[1440px]">
       <header>
         <Navbar />
