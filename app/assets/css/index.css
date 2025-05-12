@@ -14,11 +14,17 @@
 
   --color-background: var(--color-indigo-50);
   --color-foreground: var(--color-indigo-950);
+
+  --color-primary: var(--color-indigo-500);
+
   --color-separator: var(--color-indigo-200);
 }
 
 .dark {
   --color-background: var(--color-indigo-950);
   --color-foreground: var(--color-indigo-50);
+
+  --color-primary: var(--color-indigo-500);
+
   --color-separator: var(--color-indigo-800);
 }

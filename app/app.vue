@@ -12,13 +12,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="bg-background text-foreground h-svh">
+  <div class="bg-background text-foreground h-full">
     <div class="mx-auto max-w-[1440px]">
       <header>
         <NavBar />
       </header>
 
-      <main></main>
+      <main>
+        <SectionSplash />
+      </main>
 
       <footer></footer>
     </div>

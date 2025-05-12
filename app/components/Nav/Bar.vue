@@ -4,11 +4,10 @@
   <div class="flex justify-between py-8">
     <a href="/">Cybercoder</a>
     <nav class="flex gap-4">
-      <NavLink to="#about">About</NavLink>
+      <!-- <NavLink to="#about">About</NavLink>
       <NavLink to="#skills">Skills</NavLink>
       <NavLink to="#projects">Experience</NavLink>
-      <NavLink to="#contact">Projects</NavLink>
-      <NavLink to="#blog">Blog</NavLink>
+      <NavLink to="#contact">Projects</NavLink> -->
     </nav>
     <div class="flex gap-2">
       <ThemeSwitcher class="w-12" />
