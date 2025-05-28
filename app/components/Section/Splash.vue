@@ -20,15 +20,16 @@ onMounted(() => {
 <template>
   <div class="flex h-screen items-center justify-between lg:px-24">
     <div>
-      <h1 class="text-6xl font-semibold md:text-7xl">
-        Hi, I'm Nishant
-        <div class="mt-2">
-          <span class="text-primary max-w-min" ref="cybercoder">
-            AKA <br />
-            Cybercoder
-          </span>
+      <h1 class="text-6xl font-semibold md:text-7xl">Hi, I'm Nishant</h1>
+      <div class="mt-2">
+        <div
+          class="text-primary mt-2 inline max-w-min text-6xl md:text-7xl"
+          ref="cybercoder"
+          role="text">
+          AKA <br />
+          Cybercoder
         </div>
-      </h1>
+      </div>
 
       <div class="mt-20 text-lg [&>p]:my-4">
         <p>I'm a Full-stack developer, and also a Musician/Teacher.</p>
