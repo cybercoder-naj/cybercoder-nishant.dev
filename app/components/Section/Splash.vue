@@ -1,9 +1,33 @@
+<script setup lang="ts">
+import gsap from 'gsap';
+import SplitText from 'gsap/SplitText';
+
+const cybercoder = useTemplateRef<HTMLSpanElement>('cybercoder');
+onMounted(() => {
+  const split = SplitText.create(cybercoder.value, {
+    type: 'chars'
+  });
+
+  gsap.from(split.chars, {
+    duration: 0.5,
+    opacity: 0,
+    y: 50,
+    stagger: 0.03
+  });
+});
+</script>
+
 <template>
-  <div class="flex h-[80vh] items-center justify-between lg:px-24">
+  <div class="flex h-screen items-center justify-between lg:px-24">
     <div>
       <h1 class="text-6xl font-semibold md:text-7xl">
         Hi, I'm Nishant
-        <span class="text-primary block max-w-min">AKA Cybercoder</span>
+        <div class="mt-2">
+          <span class="text-primary max-w-min" ref="cybercoder">
+            AKA <br />
+            Cybercoder
+          </span>
+        </div>
       </h1>
 
       <div class="mt-20 text-lg [&>p]:my-4">

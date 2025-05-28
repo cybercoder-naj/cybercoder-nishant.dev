@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex justify-between py-8">
+  <div class="fixed top-0 right-24 left-24 z-50 flex justify-between py-8">
     <a href="/">Cybercoder</a>
     <nav class="flex gap-4">
       <!-- <NavLink to="#about">About</NavLink>
