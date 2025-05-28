@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
 
-  modules: ['@nuxtjs/seo', '@nuxt/icon', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/seo', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/fonts'],
 
   site: {
     url: 'cybercoder-nishant.dev',
@@ -39,5 +39,14 @@ export default defineNuxtConfig({
     fallback: 'dark',
     classPrefix: '',
     classSuffix: ''
+  },
+
+  fonts: {
+    families: [
+      {
+        name: 'Sora',
+        provider: 'google'
+      }
+    ]
   }
 });

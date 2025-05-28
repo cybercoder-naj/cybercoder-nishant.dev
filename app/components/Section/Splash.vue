@@ -1,7 +1,7 @@
 <template>
-  <div class="flex h-[80vh] items-center justify-between px-24">
+  <div class="flex h-[80vh] items-center justify-between lg:px-24">
     <div>
-      <h1 class="text-7xl font-semibold">
+      <h1 class="text-6xl font-semibold md:text-7xl">
         Hi, I'm Nishant
         <span class="text-primary block max-w-min">AKA Cybercoder</span>
       </h1>

@@ -18,6 +18,10 @@
   --color-primary: var(--color-indigo-500);
 
   --color-separator: var(--color-indigo-200);
+
+  --font-sans: 'Sora', sans-serif;
+
+  --cursor-glow-shadow: 0 0 32px var(--color-primary);
 }
 
 .dark {

@@ -12,8 +12,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="bg-background text-foreground h-full">
-    <div class="mx-auto max-w-[1440px]">
+  <div class="bg-background text-foreground h-full px-24 font-sans">
+    <div>
       <header>
         <NavBar />
       </header>
