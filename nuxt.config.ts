@@ -10,7 +10,8 @@ export default defineNuxtConfig({
 
   app: {
     rootAttrs: {
-      id: 'app'
+      id: 'app',
+      style: 'height: 100dvh;'
     },
     head: {
       htmlAttrs: {
@@ -20,12 +21,18 @@ export default defineNuxtConfig({
     }
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/index.css'],
   vite: {
     plugins: [tailwindcss()]
   },
 
-  modules: ['@nuxt/icon', '@nuxtjs/color-mode', 'motion-v/nuxt', '@nuxtjs/seo'],
+  modules: ['@nuxtjs/seo', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/fonts'],
+
+  site: {
+    url: 'cybercoder-nishant.dev',
+    indexable: true,
+    name: "Nishant Aanjaney Jalan's Portfolio"
+  },
 
   colorMode: {
     preference: 'dark',
@@ -34,9 +41,12 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
 
-  site: {
-    url: 'cybercoder-nishant.dev',
-    indexable: true,
-    name: "Nishant Aanjaney Jalan's Portfolio"
+  fonts: {
+    families: [
+      {
+        name: 'Sora',
+        provider: 'google'
+      }
+    ]
   }
 });

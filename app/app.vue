@@ -9,27 +9,20 @@ useSeoMeta({
   keywords:
     'cybercoder, Nishant Aanjaney Jalan, software engineer, web developer, android developer, full-stack developer, portfolio'
 });
-
-const { remainingHeight } = useNavbarHeight();
 </script>
 
 <template>
-  <header class="font-serif text-black dark:text-white">
-    <nav
-      class="fixed z-20 flex w-full justify-center bg-white dark:bg-black"
-      ref="navbar">
-      <Navbar
-        class="mx-4 my-4 w-full max-w-[1440px] md:mx-16 lg:mx-20 xl:mx-24 2xl:mx-28" />
-    </nav>
-  </header>
+  <div class="bg-background text-foreground h-full px-24 font-sans">
+    <div>
+      <header>
+        <NavBar />
+      </header>
 
-  <main class="font-serif text-black dark:text-white">
-    <div class="relative">
-      <Jumbotron id="" class="sticky h-screen w-full" />
-      <AboutMe
-        id="about"
-        class="relative z-10 w-full"
-        :style="{ height: remainingHeight }" />
+      <main>
+        <SectionSplash />
+      </main>
+
+      <footer></footer>
     </div>
-  </main>
+  </div>
 </template>
