@@ -48,5 +48,12 @@ export default defineNuxtConfig({
         provider: 'google'
       }
     ]
+  },
+
+  nitro: {
+    preset: 'cloudflare-pages',
+    cloudflare: {
+      nodeCompat: true
+    }
   }
 });
