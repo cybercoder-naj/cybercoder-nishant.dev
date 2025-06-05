@@ -15,7 +15,7 @@
         "vue-router": "^4.5.0",
       },
       "devDependencies": {
-        "@iconify-json/material-symbols": "^1.2.20",
+        "@iconify-json/material-symbols": "^1.2.24",
         "@iconify-json/uil": "^1.2.3",
         "@tailwindcss/vite": "^4.1.8",
         "prettier": "^3.5.3",
@@ -151,7 +151,7 @@
 
     "@fastify/busboy": ["@fastify/busboy@3.1.1", "", {}, "sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw=="],
 
-    "@iconify-json/material-symbols": ["@iconify-json/material-symbols@1.2.20", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-+KqOT+3fD+LC2FbWiV8gd4+JLMiVUtmqrjzpKN1ji7rfMQTwvYJ94RT0WQlmL+vfDNJ5MTRe3rBzzJyvIH/aSg=="],
+    "@iconify-json/material-symbols": ["@iconify-json/material-symbols@1.2.24", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-SYEpI2LKwWE50D9SDmX4KvfX6cMOVb/AOtyiFWulshRoXbZMBxgBEOiR7vbGESnn46SI6miHuH7IbCiqb+1RBQ=="],
 
     "@iconify-json/uil": ["@iconify-json/uil@1.2.3", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-if91+UBhDQc6glPsIaXecGIcXnbQZfEO4Gdv89TV2xQ+V5e9GWbY5rNl2fsKZd8COsRQ5lRQAKimVQVL0CZZVg=="],
 
