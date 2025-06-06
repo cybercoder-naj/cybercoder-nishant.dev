@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="fixed top-0 right-24 left-24 z-50 flex justify-between py-8">
+  <div class="flex justify-between py-8">
     <a href="/">Cybercoder</a>
     <nav class="flex gap-4">
       <!-- <NavLink to="#about">About</NavLink>
@@ -24,11 +24,6 @@
         class="size-6"
         icon="uil:linkedin"
         link="https://linkedin.com/in/nishant-aanjaney-jalan-0b8a1a1b4/" />
-      <IconLink
-        aria-label="Medium"
-        class="size-6"
-        icon="uil:medium-m"
-        link="https://medium.com/@cybercoder.naj" />
       <IconLink
         aria-label="Email"
         class="size-6"
