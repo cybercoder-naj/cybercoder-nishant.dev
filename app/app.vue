@@ -16,7 +16,8 @@ const { headerHeightPx } = useHeaderHeight();
 </script>
 
 <template>
-  <div class="bg-background text-foreground relative h-full px-8 font-sans">
+  <div
+    class="bg-background text-foreground relative h-full overflow-y-scroll px-8 font-sans">
     <header
       class="bg-background sticky top-0 right-0 left-0 z-50"
       :ref="HEADER_REF_STRING">
@@ -24,7 +25,7 @@ const { headerHeightPx } = useHeaderHeight();
     </header>
 
     <main class="main-container">
-      <SectionSplash class="h-full" />
+      <SectionIntro class="h-full w-full" />
     </main>
 
     <footer></footer>
@@ -33,8 +34,6 @@ const { headerHeightPx } = useHeaderHeight();
 
 <style scoped>
 .main-container {
-  @apply relative;
-
   height: calc(100dvh - v-bind(headerHeightPx));
 }
 </style>
