@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import gsap from 'gsap';
 import SplitText from 'gsap/SplitText';
+import { GLTFModel } from '@tresjs/cientos';
 
 const cybercoder = useTemplateRef<HTMLSpanElement>('cybercoder');
 onMounted(() => {
@@ -34,7 +35,14 @@ onMounted(() => {
     </div>
 
     <TresCanvas class="!absolute inset-0 z-10">
-      <TresPerspectiveCamera :position="[3, 3, 3]" :look-at="[0, -0.5, 1.5]" />
+      <TresPerspectiveCamera
+        :position="[5.5, 1.65, -2.2]"
+        :look-at="[3, 0.5, 0]" />
+      <Suspense>
+        <GLTFModel path="/models/desk.glb" darco />
+      </Suspense>
+      <TresDirectionalLight cast-shadow :position="[3, 2, -1]" />
+      <TresAmbientLight :intensity="0.4" />
     </TresCanvas>
   </div>
 </template>
