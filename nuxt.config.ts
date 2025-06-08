@@ -26,13 +26,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
 
-  modules: [
-    '@nuxtjs/seo',
-    '@nuxt/icon',
-    '@nuxtjs/color-mode',
-    '@nuxt/fonts',
-    '@tresjs/nuxt'
-  ],
+  modules: ['@nuxtjs/seo', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/fonts'],
 
   site: {
     url: 'cybercoder-nishant.dev',
