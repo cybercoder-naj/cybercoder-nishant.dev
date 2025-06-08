@@ -10,7 +10,8 @@ onMounted(() => {
     repeat: -1,
     yoyo: true,
     repeatDelay: 2,
-    delay: 2
+    delay: 2,
+    ease: 'power1.inOut'
   });
 });
 </script>

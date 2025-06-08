@@ -15,6 +15,9 @@
   --color-background: var(--color-indigo-50);
   --color-foreground: var(--color-indigo-950);
 
+  --color-surface: var(--color-indigo-100);
+  --color-on-surface: var(--color-indigo-700);
+
   --color-primary: var(--color-indigo-500);
 
   --color-separator: var(--color-indigo-200);
@@ -27,6 +30,9 @@
 .dark {
   --color-background: var(--color-indigo-950);
   --color-foreground: var(--color-indigo-50);
+
+  --color-surface: var(--color-indigo-800);
+  --color-on-surface: var(--color-indigo-200);
 
   --color-primary: var(--color-indigo-500);
 

@@ -21,11 +21,11 @@ watchEffect(() => {
     <div class="relative flex items-center justify-between">
       <a href="/">Cybercoder</a>
       <nav class="hidden gap-4 md:flex">
-        <NavLink to="#about">About</NavLink>
+        <!-- <NavLink to="#about">About</NavLink>
         <NavLink to="#skills">Skills</NavLink>
         <NavLink to="#projects">Experience</NavLink>
         <NavLink to="#contact">Projects</NavLink>
-        <NavLink to="#contact">Blog</NavLink>
+        <NavLink to="#contact">Blog</NavLink> -->
       </nav>
       <div class="md:hidden">
         <HamburgerIcon @click="toggleHamburger" />
@@ -53,18 +53,40 @@ watchEffect(() => {
       </div>
 
       <div
-        class="bg-separator absolute top-full right-0 left-0 mt-4 origin-top rounded-md px-4 py-2 transition-transform duration-500 ease-in-out"
+        class="bg-surface text-on-surface absolute top-full right-0 left-0 mt-4 origin-top rounded-md px-4 py-2 shadow transition-transform duration-500 ease-in-out"
         :class="{
           'scale-y-100': hamburgerOpen,
           'scale-y-0': !hamburgerOpen
         }">
-        <nav class="flex flex-col [&>a]:py-2">
-          <NavLink to="#about">About</NavLink>
-          <NavLink to="#skills">Skills</NavLink>
-          <NavLink to="#projects">Experience</NavLink>
-          <NavLink to="#contact">Projects</NavLink>
-          <NavLink to="#contact">Blog</NavLink>
-        </nav>
+        <div class="flex justify-between">
+          <nav class="flex flex-col [&>a]:py-2">
+            <!-- <NavLink to="#about">About</NavLink>
+            <NavLink to="#skills">Skills</NavLink>
+            <NavLink to="#projects">Experience</NavLink>
+            <NavLink to="#contact">Projects</NavLink>
+            <NavLink to="#contact">Blog</NavLink> -->
+          </nav>
+
+          <div class="flex items-end gap-2 py-2">
+            <ThemeSwitcher class="h-6 w-12" />
+
+            <IconLink
+              aria-label="GitHub"
+              class="size-6"
+              icon="uil:github"
+              link="https://github.com/cybercoder-naj" />
+            <IconLink
+              aria-label="LinkedIn"
+              class="size-6"
+              icon="uil:linkedin"
+              link="https://linkedin.com/in/nishant-aanjaney-jalan-0b8a1a1b4/" />
+            <IconLink
+              aria-label="Email"
+              class="size-6"
+              icon="uil:envelope"
+              link="mailto:cybercoder.nishant@gmail.com" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
