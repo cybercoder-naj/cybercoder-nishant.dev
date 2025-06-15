@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="relative flex min-h-dvh w-full">
+  <section class="relative min-h-dvh w-full">
     <div
       class="2xs:text-4xl relative z-20 flex min-h-dvh flex-col items-start justify-center text-3xl sm:text-5xl md:text-6xl">
       <h1 class="font-semibold">Hi, I'm Nishant</h1>
@@ -32,6 +32,10 @@ onMounted(() => {
       </div>
     </div>
 
-    <canvas class="absolute inset-0 z-10 h-full w-full"> </canvas>
+    <div class="min-h-dvh">
+      <h3 class="2xs:text-2xl text-3xl sm:text-5xl md:text-6xl">I am a:</h3>
+    </div>
+
+    <canvas class="absolute inset-0 z-10 hidden h-full w-full"> </canvas>
   </section>
 </template>
