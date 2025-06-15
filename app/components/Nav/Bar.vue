@@ -17,16 +17,16 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="py-8">
+  <nav class="py-8">
     <div class="relative flex items-center justify-between">
       <a href="/">Cybercoder</a>
-      <nav class="hidden gap-4 md:flex">
+      <ul class="hidden gap-4 md:flex">
         <!-- <NavLink to="#about">About</NavLink>
         <NavLink to="#skills">Skills</NavLink>
         <NavLink to="#projects">Experience</NavLink>
         <NavLink to="#contact">Projects</NavLink>
         <NavLink to="#contact">Blog</NavLink> -->
-      </nav>
+      </ul>
       <div class="md:hidden">
         <HamburgerIcon @click="toggleHamburger" />
       </div>
@@ -59,13 +59,13 @@ watchEffect(() => {
           'scale-y-0': !hamburgerOpen
         }">
         <div class="flex justify-between">
-          <nav class="flex flex-col [&>a]:py-2">
+          <ul class="flex flex-col [&>a]:py-2">
             <!-- <NavLink to="#about">About</NavLink>
             <NavLink to="#skills">Skills</NavLink>
             <NavLink to="#projects">Experience</NavLink>
             <NavLink to="#contact">Projects</NavLink>
             <NavLink to="#contact">Blog</NavLink> -->
-          </nav>
+          </ul>
 
           <div class="flex items-end gap-2 py-2">
             <ThemeSwitcher class="h-6 w-12" />
@@ -89,5 +89,5 @@ watchEffect(() => {
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
