@@ -25,6 +25,9 @@
   --font-sans: 'Sora', sans-serif;
 
   --cursor-glow-shadow: 0 0 32px var(--color-primary);
+
+  --breakpoint-2xs: 28rem;
+  --breakpoint-xs: 32rem;
 }
 
 .dark {

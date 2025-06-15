@@ -19,13 +19,12 @@ onMounted(() => {
 
 <template>
   <div class="relative">
-    <div class="relative z-20 flex h-full flex-col items-start justify-center">
-      <h1 class="text-4xl font-semibold sm:text-5xl md:text-6xl">
-        Hi, I'm Nishant
-      </h1>
+    <div
+      class="2xs:text-4xl relative z-20 flex h-full flex-col items-start justify-center text-3xl sm:text-5xl md:text-6xl">
+      <h1 class="font-semibold">Hi, I'm Nishant</h1>
       <div class="mt-2">
         <div
-          class="text-primary mt-2 inline max-w-min text-4xl sm:text-5xl md:text-6xl"
+          class="text-primary mt-2 inline max-w-min"
           ref="cybercoder"
           role="text">
           AKA Cybercoder

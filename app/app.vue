@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { HEADER_REF_STRING } from './composables/useHeaderHeight';
-
 useHead({
   title: 'Portfolio'
 });
@@ -11,29 +9,20 @@ useSeoMeta({
   keywords:
     'cybercoder, Nishant Aanjaney Jalan, software engineer, web developer, android developer, full-stack developer, portfolio'
 });
-
-const { headerHeightPx } = useHeaderHeight();
 </script>
 
 <template>
   <div
-    class="bg-background text-foreground relative h-full overflow-y-scroll px-8 font-sans">
+    class="bg-background text-foreground relative h-full overflow-y-scroll px-8 font-sans md:px-16 lg:px-28 xl:px-36 2xl:px-40">
     <header
-      class="bg-background sticky top-0 right-0 left-0 z-50"
-      :ref="HEADER_REF_STRING">
+      class="bg-background fixed inset-x-8 top-0 z-50 md:inset-x-16 lg:inset-x-28 xl:inset-x-36 2xl:inset-x-40">
       <NavBar class="w-full" />
     </header>
 
-    <main class="main-container">
+    <main class="h-dvh">
       <SectionIntro class="h-full w-full" />
     </main>
 
     <footer></footer>
   </div>
 </template>
-
-<style scoped>
-.main-container {
-  height: calc(100dvh - v-bind(headerHeightPx));
-}
-</style>
