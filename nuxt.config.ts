@@ -10,8 +10,7 @@ export default defineNuxtConfig({
 
   app: {
     rootAttrs: {
-      id: 'app',
-      style: 'height: 100dvh;'
+      id: 'app'
     },
     head: {
       htmlAttrs: {
