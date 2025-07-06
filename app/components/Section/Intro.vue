@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <section class="relative min-h-dvh w-full">
     <div
-      class="relative z-20 flex min-h-dvh w-1/2 flex-col items-start justify-center">
+      class="relative z-20 flex min-h-dvh flex-col items-start justify-center">
       <h1 class="heading-1 font-semibold">Hi, I'm Nishant</h1>
       <div class="heading-1">
         <div
@@ -44,7 +44,7 @@ onMounted(() => {
           AKA Cybercoder
         </div>
       </div>
-      <p class="heading-6 mt-8" ref="description">
+      <p class="heading-6 mt-8 max-w-[40rem]" ref="description">
         I'm a Developer, Student, Musician and Teacher. I also enjoy cycling,
         motorsport racing and coffee.
       </p>

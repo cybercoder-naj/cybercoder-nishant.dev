@@ -21,6 +21,7 @@ useSeoMeta({
 
     <main>
       <SectionIntro />
+      <SectionAbout />
     </main>
 
     <footer></footer>
