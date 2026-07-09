@@ -35,21 +35,10 @@ watchEffect(() => {
 
         <div class="bg-separator w-0.5"></div>
 
-        <IconLink
-          aria-label="GitHub"
-          class="size-6"
-          icon="uil:github"
-          link="https://github.com/cybercoder-naj" />
-        <IconLink
-          aria-label="LinkedIn"
-          class="size-6"
-          icon="uil:linkedin"
-          link="https://linkedin.com/in/nishant-aanjaney-jalan-0b8a1a1b4/" />
-        <IconLink
-          aria-label="Email"
-          class="size-6"
-          icon="uil:envelope"
-          link="mailto:cybercoder.nishant@gmail.com" />
+        <IconLink aria-label="GitHub" class="size-6" icon="uil:github" link="https://github.com/cybercoder-naj" />
+        <IconLink aria-label="LinkedIn" class="size-6" icon="uil:linkedin"
+          link="https://linkedin.com/in/nishant-a-jalan" />
+        <IconLink aria-label="Email" class="size-6" icon="uil:envelope" link="mailto:cybercoder.nishant@gmail.com" />
       </div>
 
       <div
@@ -70,20 +59,10 @@ watchEffect(() => {
           <div class="flex items-end gap-2 py-2">
             <ThemeSwitcher class="h-6 w-12" />
 
-            <IconLink
-              aria-label="GitHub"
-              class="size-6"
-              icon="uil:github"
-              link="https://github.com/cybercoder-naj" />
-            <IconLink
-              aria-label="LinkedIn"
-              class="size-6"
-              icon="uil:linkedin"
-              link="https://linkedin.com/in/nishant-aanjaney-jalan-0b8a1a1b4/" />
-            <IconLink
-              aria-label="Email"
-              class="size-6"
-              icon="uil:envelope"
+            <IconLink aria-label="GitHub" class="size-6" icon="uil:github" link="https://github.com/cybercoder-naj" />
+            <IconLink aria-label="LinkedIn" class="size-6" icon="uil:linkedin"
+              link="https://linkedin.com/in/nishant-a-jalan" />
+            <IconLink aria-label="Email" class="size-6" icon="uil:envelope"
               link="mailto:cybercoder.nishant@gmail.com" />
           </div>
         </div>

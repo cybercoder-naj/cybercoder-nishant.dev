@@ -1,12 +1,9 @@
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  compatibilityDate: '2024-11-26',
-  future: {
-    compatibilityVersion: 4
-  },
 
   app: {
     rootAttrs: {
@@ -23,10 +20,27 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/index.css'],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        '@unhead/schema-org/vue',
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        '@vueuse/core',
+        'gsap',
+        'gsap/MorphSVGPlugin',
+        'gsap/ScrollTrigger',
+        'gsap/SplitText',
+      ]
+    }
   },
 
-  modules: ['@nuxtjs/seo', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/fonts'],
+  modules: [
+    '@nuxtjs/seo',
+    '@nuxt/icon',
+    '@nuxtjs/color-mode',
+    '@nuxt/fonts',
+  ],
 
   site: {
     url: 'cybercoder-nishant.dev',
