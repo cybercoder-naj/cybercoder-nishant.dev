@@ -12,14 +12,13 @@ const props = defineProps<Props>();
 </template>
 
 <style scoped>
+@reference '~/assets/css/index.css';
+
 a::after {
-  content: '';
-  position: absolute;
+  @apply md:content-[''] absolute left-0 w-full bg-secondary;
+
   bottom: -0.25rem;
-  left: 0;
-  width: 100%;
   height: 2px;
-  background-color: var(--color-secondary);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease-in-out;

@@ -20,7 +20,7 @@ watchEffect(() => {
   <nav class="py-8">
     <div class="relative flex items-center justify-between">
       <a id="main-icon" href="/">Nishant</a>
-      <ul class="hidden gap-8 md:flex">
+      <ul class="hidden lg:flex lg:gap-2 xl:gap-6 2xl:gap-8">
         <NavLink to="#">Home</NavLink>
         <NavLink to="#experience">Experience</NavLink>
         <NavLink to="#projects">Projects</NavLink>
@@ -29,10 +29,10 @@ watchEffect(() => {
         <NavLink to="#testimonials">Testimonials</NavLink>
         <NavLink to="#contact">Contact</ NavLink>
       </ul>
-      <div class="md:hidden">
+      <div class="lg:hidden">
         <HamburgerIcon @click="toggleHamburger" />
       </div>
-      <div class="hidden gap-2 md:flex">
+      <div class="hidden gap-2 lg:flex">
         <ThemeSwitcher class="w-12" />
 
         <div class="bg-separator w-0.5"></div>
