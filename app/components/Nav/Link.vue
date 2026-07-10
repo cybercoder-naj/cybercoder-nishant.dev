@@ -6,7 +6,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <a :href="props.to" class="transition duration-300 not-hover:opacity-70 relative">
+  <a :href="props.to" class="transition duration-300 text-foreground-secondary hover:text-foreground relative">
     <slot />
   </a>
 </template>
