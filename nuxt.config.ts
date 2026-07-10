@@ -61,6 +61,9 @@ export default defineNuxtConfig({
         name: 'Sora',
         provider: 'google'
       }
-    ]
+    ],
+    defaults: {
+      weights: [200, 400, 600, 800]
+    }
   }
 });

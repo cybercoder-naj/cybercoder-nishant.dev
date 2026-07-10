@@ -3,6 +3,151 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  /*
+   * -------------------------------------------------------------------------
+   * Indigo Neutral Scale
+   * -------------------------------------------------------------------------
+   * Mostly-neutral indigo for backgrounds and surfaces.
+   * Monotonic lightness so intermediate values can be added later.
+   */
+
+  --color-indigo-50: hsl(240 25% 98%);
+  --color-indigo-100: hsl(240 22% 95%);
+  --color-indigo-200: hsl(240 18% 90%);
+  --color-indigo-300: hsl(240 15% 82%);
+  --color-indigo-400: hsl(240 13% 70%);
+  --color-indigo-500: hsl(240 11% 56%);
+  --color-indigo-600: hsl(240 12% 44%);
+  --color-indigo-700: hsl(240 14% 33%);
+  --color-indigo-800: hsl(240 16% 21%);
+  --color-indigo-900: hsl(240 18% 13%);
+  --color-indigo-950: hsl(240 20% 8%);
+
+  /*
+   * -------------------------------------------------------------------------
+   * Primary Brand (Violet)
+   * -------------------------------------------------------------------------
+   */
+
+  --color-violet-300: hsl(262 95% 76%);
+  --color-violet-400: hsl(262 92% 71%);
+  --color-violet-500: hsl(262 88% 67%);
+  --color-violet-600: hsl(262 82% 58%);
+  --color-violet-700: hsl(262 75% 48%);
+
+  /*
+   * -------------------------------------------------------------------------
+   * Secondary Accent (Amber)
+   * -------------------------------------------------------------------------
+   */
+
+  --color-amber-300: hsl(39 95% 73%);
+  --color-amber-500: hsl(38 90% 60%);
+  --color-amber-700: hsl(34 89% 32%);
+
+  /*
+   * -------------------------------------------------------------------------
+   * Semantic (Light)
+   * -------------------------------------------------------------------------
+   */
+
+  --color-background: var(--color-indigo-50);
+  --color-foreground: var(--color-indigo-950);
+
+  --color-surface: var(--color-indigo-100);
+  --color-surface-hover: var(--color-indigo-200);
+  --color-surface-elevated: white;
+
+  --color-border: var(--color-indigo-200);
+  --color-separator: var(--color-indigo-200);
+
+  --color-muted: var(--color-indigo-500);
+  --color-muted-foreground: var(--color-indigo-600);
+
+  --color-primary: var(--color-violet-500);
+  --color-primary-hover: var(--color-violet-600);
+  --color-primary-active: var(--color-violet-700);
+
+  /*
+   * Always use dark text on violet.
+   * This passes WCAG in both themes.
+   */
+  --color-primary-foreground: var(--color-indigo-950);
+
+  --color-secondary: var(--color-amber-500);
+  --color-secondary-foreground: var(--color-indigo-950);
+
+  --color-link: var(--color-violet-600);
+
+  --color-ring: var(--color-violet-400);
+
+  /*
+   * Status
+   */
+
+  --color-success: hsl(145 63% 42%);
+  --color-warning: hsl(39 90% 58%);
+  --color-danger: hsl(355 76% 56%);
+  --color-info: hsl(205 90% 55%);
+
+  /*
+   * Typography
+   */
+
+  --font-sans: 'Sora', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /*
+   * Breakpoints
+   */
+
+  --breakpoint-2xs: 28rem;
+  --breakpoint-xs: 32rem;
+}
+
+/*
+ * ============================================================================
+ * Dark Theme
+ * ============================================================================
+ */
+
+.dark {
+  --color-background: var(--color-indigo-950);
+  --color-foreground: hsl(0 0% 97%);
+
+  --color-surface: var(--color-indigo-900);
+  --color-surface-hover: var(--color-indigo-800);
+  --color-surface-elevated: hsl(240 17% 16%);
+
+  --color-border: hsl(240 10% 22%);
+  --color-separator: hsl(240 10% 18%);
+
+  --color-muted: hsl(240 8% 65%);
+  --color-muted-foreground: hsl(240 7% 74%);
+
+  /*
+   * Slightly brighter in dark mode.
+   */
+
+  --color-primary: var(--color-violet-400);
+  --color-primary-hover: var(--color-violet-300);
+  --color-primary-active: var(--color-violet-500);
+
+  /*
+   * Still dark text.
+   */
+
+  --color-primary-foreground: var(--color-indigo-950);
+
+  --color-secondary: var(--color-amber-300);
+  --color-secondary-foreground: var(--color-indigo-950);
+
+  --color-link: var(--color-violet-300);
+
+  --color-ring: var(--color-violet-300);
+}
+
+/* @theme {
   --color-indigo-50: hsl(250, 10%, 94%);
   --color-indigo-100: hsl(250, 20%, 88%);
   --color-indigo-200: hsl(250, 25%, 85%);
@@ -24,8 +169,6 @@
 
   --font-sans: 'Sora', sans-serif;
 
-  --cursor-glow-shadow: 0 0 32px var(--color-primary);
-
   --breakpoint-2xs: 28rem;
   --breakpoint-xs: 32rem;
 }
@@ -40,4 +183,4 @@
   --color-primary: var(--color-indigo-500);
 
   --color-separator: var(--color-indigo-800);
-}
+} */

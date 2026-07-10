@@ -19,13 +19,15 @@ watchEffect(() => {
 <template>
   <nav class="py-8">
     <div class="relative flex items-center justify-between">
-      <a href="/">Cybercoder</a>
-      <ul class="hidden gap-4 md:flex">
-        <!-- <NavLink to="#about">About</NavLink>
-        <NavLink to="#skills">Skills</NavLink>
-        <NavLink to="#projects">Experience</NavLink>
-        <NavLink to="#contact">Projects</NavLink>
-        <NavLink to="#contact">Blog</NavLink> -->
+      <a id="main-icon" href="/">Nishant</a>
+      <ul class="hidden gap-8 md:flex">
+        <NavLink to="#">Home</NavLink>
+        <NavLink to="#experience">Experience</NavLink>
+        <NavLink to="#projects">Projects</NavLink>
+        <NavLink to="#blog">Blog</NavLink>
+        <NavLink to="#hobbies">Hobbies</NavLink>
+        <NavLink to="#testimonials">Testimonials</NavLink>
+        <NavLink to="#contact">Contact</ NavLink>
       </ul>
       <div class="md:hidden">
         <HamburgerIcon @click="toggleHamburger" />
@@ -49,11 +51,13 @@ watchEffect(() => {
         }">
         <div class="flex justify-between">
           <ul class="flex flex-col [&>a]:py-2">
-            <!-- <NavLink to="#about">About</NavLink>
-            <NavLink to="#skills">Skills</NavLink>
-            <NavLink to="#projects">Experience</NavLink>
-            <NavLink to="#contact">Projects</NavLink>
-            <NavLink to="#contact">Blog</NavLink> -->
+            <NavLink to="#">Home</NavLink>
+            <NavLink to="#experience">Experience</NavLink>
+            <NavLink to="#projects">Projects</NavLink>
+            <NavLink to="#blog">Blog</NavLink>
+            <NavLink to="#hobbies">Hobbies</NavLink>
+            <NavLink to="#testimonials">Testimonials</NavLink>
+            <NavLink to="#contact">Contact</ NavLink>
           </ul>
 
           <div class="flex items-end gap-2 py-2">
@@ -70,3 +74,15 @@ watchEffect(() => {
     </div>
   </nav>
 </template>
+
+<style scoped>
+@reference "~/assets/css/index.css";
+
+#main-icon {
+  @apply font-semibold text-xl;
+}
+
+#main-icon::after {
+  @apply content-['::'] text-primary ml-1;
+}
+</style>
