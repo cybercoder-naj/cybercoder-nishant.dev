@@ -9,8 +9,6 @@ defineProps<Props>();
 
 <template>
   <a :href="link" target="_blank" rel="noopener" :aria-label="ariaLabel">
-    <Icon
-      :name="icon"
-      class="size-full transition-opacity not-hover:opacity-80" />
+    <Icon :name="icon" class="size-full transition-opacity text-foreground-secondary hover:text-foreground" />
   </a>
 </template>
