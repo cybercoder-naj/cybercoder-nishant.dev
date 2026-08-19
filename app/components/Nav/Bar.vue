@@ -21,13 +21,27 @@ watchEffect(() => {
     <div class="relative flex items-center justify-between">
       <a id="main-icon" href="/">Nishant</a>
       <ul class="hidden lg:flex lg:gap-2 xl:gap-6 2xl:gap-8">
-        <NavLink to="#">Home</NavLink>
-        <NavLink to="#experience">Experience</NavLink>
-        <NavLink to="#projects">Projects</NavLink>
-        <NavLink to="#blog">Blog</NavLink>
-        <NavLink to="#hobbies">Hobbies</NavLink>
-        <NavLink to="#testimonials">Testimonials</NavLink>
-        <NavLink to="#contact">Contact</ NavLink>
+        <li>
+          <NavLink to="#">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="#experience">Experience</NavLink>
+        </li>
+        <li>
+          <NavLink to="#projects">Projects</NavLink>
+        </li>
+        <li>
+          <NavLink to="#blog">Blog</NavLink>
+        </li>
+        <li>
+          <NavLink to="#hobbies">Hobbies</NavLink>
+        </li>
+        <li>
+          <NavLink to="#testimonials">Testimonials</NavLink>
+        </li>
+        <li>
+          <NavLink to="#contact">Contact</ NavLink>
+        </li>
       </ul>
       <div class="lg:hidden">
         <HamburgerIcon @click="toggleHamburger" />
@@ -49,13 +63,27 @@ watchEffect(() => {
         }">
         <div class="flex justify-between">
           <ul class="flex flex-col [&>a]:py-2">
-            <NavLink to="#">Home</NavLink>
-            <NavLink to="#experience">Experience</NavLink>
-            <NavLink to="#projects">Projects</NavLink>
-            <NavLink to="#blog">Blog</NavLink>
-            <NavLink to="#hobbies">Hobbies</NavLink>
-            <NavLink to="#testimonials">Testimonials</NavLink>
-            <NavLink to="#contact">Contact</ NavLink>
+            <li>
+              <NavLink to="#">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="#experience">Experience</NavLink>
+            </li>
+            <li>
+              <NavLink to="#projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="#blog">Blog</NavLink>
+            </li>
+            <li>
+              <NavLink to="#hobbies">Hobbies</NavLink>
+            </li>
+            <li>
+              <NavLink to="#testimonials">Testimonials</NavLink>
+            </li>
+            <li>
+              <NavLink to="#contact">Contact</ NavLink>
+            </li>
           </ul>
 
           <div class="flex items-end gap-2 py-2">

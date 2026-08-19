@@ -5,14 +5,19 @@ import SplitText from 'gsap/SplitText';
 const cybercoder = useTemplateRef<HTMLSpanElement>('cybercoder');
 onMounted(() => {
   const split = SplitText.create(cybercoder.value, {
-    type: 'chars'
+    type: 'chars',
+    tag: 'span'
+  });
+
+  split.chars.forEach((char) => {
+    char.setAttribute('role', 'presentation');
   });
 
   gsap.from(split.chars, {
     duration: 0.5,
     opacity: 0,
     y: 50,
-    stagger: 0.03
+    stagger: 0.03,
   });
 });
 </script>
@@ -21,7 +26,7 @@ onMounted(() => {
   <section id="" class="relative grid place-content-center overflow-hidden">
     <h1
       class="z-10 text-center text-4xl lg:text-6xl font-medium tracking-tighter whitespace-pre-wrap text-black dark:text-white">
-      I'm <span ref="cybercoder" class="font-bold text-primary">Nishant</span>, The Cybercoder.
+      I'm <span ref="cybercoder" class="font-bold text-primary" role="text">Nishant</span>, The Cybercoder.
     </h1>
 
     <h2 class="z-10 whitespace-pre-wrap mx-auto text-3xl lg:text-5xl mt-2 lg:mt-4 ">
