@@ -5,9 +5,9 @@ useHead({
 
 useSeoMeta({
   description:
-    "I'm Nishant Aanjaney Jalan (aka cybercoder). I'm a full-stack web and android developer. Explore my experiences, my skills and my projects.",
+    "I'm Nishant Aanjaney Jalan (aka cybercoder). I'm a C++, full-stack web and android developer. Explore my experiences, my skills and my projects.",
   keywords:
-    'cybercoder, Nishant Aanjaney Jalan, software engineer, web developer, android developer, full-stack developer, portfolio'
+    'cybercoder, Nishant Aanjaney Jalan, software engineer, C++, web developer, android developer, full-stack developer, portfolio'
 });
 </script>
 
@@ -19,7 +19,7 @@ useSeoMeta({
     </header>
 
     <main class="h-dvh">
-      <SectionHome class="h-full w-full" />
+      <SectionHome class="h-screen w-full" />
     </main>
 
     <footer></footer>

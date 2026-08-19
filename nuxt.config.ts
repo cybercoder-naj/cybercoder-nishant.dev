@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
+    '@nuxt/a11y'
   ],
 
   site: {

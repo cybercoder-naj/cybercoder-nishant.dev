@@ -15,7 +15,7 @@ const props = defineProps<Props>();
 @reference '~/assets/css/index.css';
 
 a::after {
-  @apply md:content-[''] absolute left-0 w-full bg-secondary;
+  @apply md:content-[''] absolute left-0 w-full bg-primary;
 
   bottom: -0.25rem;
   height: 2px;

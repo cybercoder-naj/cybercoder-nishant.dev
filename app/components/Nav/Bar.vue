@@ -33,14 +33,12 @@ watchEffect(() => {
         <HamburgerIcon @click="toggleHamburger" />
       </div>
       <div class="hidden gap-2 lg:flex">
-        <ThemeSwitcher class="w-12" />
+        <ThemeSwitcher class="w-12 h-6" />
 
-        <div class="bg-separator w-0.5"></div>
-
-        <IconLink aria-label="GitHub" class="size-6" icon="uil:github" link="https://github.com/cybercoder-naj" />
+        <!-- <IconLink aria-label="GitHub" class="size-6" icon="uil:github" link="https://github.com/cybercoder-naj" />
         <IconLink aria-label="LinkedIn" class="size-6" icon="uil:linkedin"
           link="https://linkedin.com/in/nishant-a-jalan" />
-        <IconLink aria-label="Email" class="size-6" icon="uil:envelope" link="mailto:cybercoder.nishant@gmail.com" />
+        <IconLink aria-label="Email" class="size-6" icon="uil:envelope" link="mailto:cybercoder.nishant@gmail.com" /> -->
       </div>
 
       <div
@@ -63,11 +61,11 @@ watchEffect(() => {
           <div class="flex items-end gap-2 py-2">
             <ThemeSwitcher class="h-6 w-12" />
 
-            <IconLink aria-label="GitHub" class="size-6" icon="uil:github" link="https://github.com/cybercoder-naj" />
+            <!-- <IconLink aria-label="GitHub" class="size-6" icon="uil:github" link="https://github.com/cybercoder-naj" />
             <IconLink aria-label="LinkedIn" class="size-6" icon="uil:linkedin"
               link="https://linkedin.com/in/nishant-a-jalan" />
             <IconLink aria-label="Email" class="size-6" icon="uil:envelope"
-              link="mailto:cybercoder.nishant@gmail.com" />
+              link="mailto:cybercoder.nishant@gmail.com" /> -->
           </div>
         </div>
       </div>
