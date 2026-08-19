@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import gsap from 'gsap';
 import SplitText from 'gsap/SplitText';
+import { useScroll } from '@vueuse/core';
 
 const cybercoder = useTemplateRef<HTMLSpanElement>('cybercoder');
 onMounted(() => {
@@ -20,6 +21,11 @@ onMounted(() => {
     stagger: 0.03,
   });
 });
+
+const scrollContainer = inject<Readonly<Ref<HTMLDivElement | null>>>('scrollContainer');
+const { y } = useScroll(scrollContainer);
+const MOUSE_ICON_FADE_DISTANCE = 180;
+const mouseIconOpacity = computed(() => 100 * (1 - y.value / MOUSE_ICON_FADE_DISTANCE));
 </script>
 
 <template>
@@ -38,7 +44,8 @@ onMounted(() => {
       class="absolute inset-0 h-[200%] skew-y-12 mask-[radial-gradient(350px_circle_at_center,white,transparent)]"
       :width="40" :height="40" :squares="[32, 32]" />
 
-    <div class="max-md:hidden absolute bottom-8 w-full grid place-items-center">
+    <div class="max-md:hidden absolute bottom-8 w-full grid place-items-center"
+      :style="{ opacity: `${mouseIconOpacity}%` }">
       <Icon name="material-symbols:mouse-outline" class="text-foreground-secondary size-8 animate-bounce" />
     </div>
   </section>
