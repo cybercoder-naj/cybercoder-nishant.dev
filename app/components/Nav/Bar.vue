@@ -22,9 +22,6 @@ watchEffect(() => {
       <a id="main-icon" href="/">Nishant</a>
       <ul class="hidden lg:flex lg:gap-2 xl:gap-6 2xl:gap-8">
         <li>
-          <NavLink to="#">Home</NavLink>
-        </li>
-        <li>
           <NavLink to="#experience">Experience</NavLink>
         </li>
         <li>
@@ -63,9 +60,6 @@ watchEffect(() => {
         }">
         <div class="flex justify-between">
           <ul class="flex flex-col [&>a]:py-2">
-            <li>
-              <NavLink to="#">Home</NavLink>
-            </li>
             <li>
               <NavLink to="#experience">Experience</NavLink>
             </li>
