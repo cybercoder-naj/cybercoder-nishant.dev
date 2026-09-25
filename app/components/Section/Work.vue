@@ -37,10 +37,10 @@ const experiences = [
       <div class="relative size-full" v-for="(exp, i) in experiences" :key="i">
         <img class="object-cover size-full" :src="exp.image" :alt="exp.title" />
         <div
-          class="absolute inset-0 bg-linear-to-t from-black to-transparent flex flex-col items-start justify-end p-4 wrap-break-word">
-          <h3 class="text-white text-lg font-bold">{{ exp.title }} </h3>
-          <h4 class="text-white text-sm">{{ exp.duration }}</h4>
-          <p class="text-white text-sm mt-2">{{ exp.description }}</p>
+          class="absolute inset-0 bg-linear-to-t from-black to-transparent flex flex-col items-start justify-end p-2 wrap-break-word">
+          <h3 class="text-white text-base font-bold">{{ exp.title }} </h3>
+          <h4 class="text-white text-xs">{{ exp.duration }}</h4>
+          <p class="text-white text-xs mt-1">{{ exp.description }}</p>
         </div>
       </div>
     </div>
