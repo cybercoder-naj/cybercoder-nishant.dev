@@ -11,7 +11,7 @@ useSeoMeta({
 });
 
 const scrollContainer = useTemplateRef<HTMLDivElement>('scroll-container');
-provide('scrollContainer', scrollContainer);
+provide(SCROLL_CONTAINER_KEY, scrollContainer);
 
 const header = useTemplateRef<HTMLElement>('header');
 const headerHeight = ref(0);

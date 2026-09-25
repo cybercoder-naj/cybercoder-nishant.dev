@@ -2,8 +2,8 @@
 import type { HTMLAttributes } from "vue";
 
 interface InteractiveGridPatternProps {
-  className?: HTMLAttributes["class"];
-  squaresClassName?: HTMLAttributes["class"];
+  class?: HTMLAttributes["class"];
+  squaresClass?: HTMLAttributes["class"];
   width?: number;
   height?: number;
   squares?: [number, number];
@@ -13,8 +13,8 @@ const {
   width = 40,
   height = 40,
   squares = [24, 24],
-  className = "",
-  squaresClassName = "",
+  class: className = "",
+  squaresClass: squaresClassName = "",
 } = defineProps<InteractiveGridPatternProps>();
 
 const horizontal = computed(() => squares[0]);
@@ -58,9 +58,9 @@ function handleMouseLeave() {
 </script>
 
 <template>
-  <svg :width="gridWidth" :height="gridHeight" :class="svgClass">
-    <rect v-for="(_, index) in totalSquares" :key="index" :x="getX(index)" :y="getY(index)" :width="width"
-      :height="height" :class="getRectClass(index)" @mouseenter="handleMouseEnter(index)"
+  <svg :width.attr="gridWidth" :height.attr="gridHeight" :class="svgClass">
+    <rect v-for="(_, index) in totalSquares" :key="index" :x.attr="getX(index)" :y.attr="getY(index)"
+      :width.attr="width" :height.attr="height" :class="getRectClass(index)" @mouseenter="handleMouseEnter(index)"
       @mouseleave="handleMouseLeave" />
   </svg>
 </template>

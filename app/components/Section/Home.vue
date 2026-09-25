@@ -22,7 +22,7 @@ onMounted(() => {
   });
 });
 
-const scrollContainer = inject<Readonly<Ref<HTMLDivElement | null>>>('scrollContainer');
+const scrollContainer = inject(SCROLL_CONTAINER_KEY);
 const { y } = useScroll(scrollContainer);
 const MOUSE_ICON_FADE_DISTANCE = 180;
 const mouseIconOpacity = computed(() => 100 * (1 - y.value / MOUSE_ICON_FADE_DISTANCE));
@@ -30,6 +30,10 @@ const mouseIconOpacity = computed(() => 100 * (1 - y.value / MOUSE_ICON_FADE_DIS
 
 <template>
   <section id="" class="relative grid place-content-center overflow-hidden">
+    <InspiraGridPattern
+      class="absolute inset-0 h-[200%] skew-y-12 mask-[radial-gradient(350px_circle_at_center,white,transparent)]"
+      :width="40" :height="40" :squares="[32, 32]" />
+
     <h1
       class="z-10 text-center text-4xl lg:text-6xl font-medium tracking-tighter whitespace-pre-wrap text-black dark:text-white">
       I'm <span ref="cybercoder" class="font-bold text-primary" role="text">Nishant</span>, The Cybercoder.
@@ -40,12 +44,7 @@ const mouseIconOpacity = computed(() => 100 * (1 - y.value / MOUSE_ICON_FADE_DIS
       <InspiraTypewriter :text="['Developer', 'Teacher', 'Racer', 'Musician']" class="text-pretty text-secondary" />
     </h2>
 
-    <InspiraGridPattern
-      class="absolute inset-0 h-[200%] skew-y-12 mask-[radial-gradient(350px_circle_at_center,white,transparent)]"
-      :width="40" :height="40" :squares="[32, 32]" />
-
-    <div class="max-md:hidden absolute bottom-8 w-full grid place-items-center"
-      :style="{ opacity: `${mouseIconOpacity}%` }">
+    <div class="absolute bottom-8 w-full grid place-items-center" :style="{ opacity: `${mouseIconOpacity}%` }">
       <Icon name="material-symbols:mouse-outline" class="text-foreground-secondary size-8 animate-bounce" />
     </div>
   </section>
