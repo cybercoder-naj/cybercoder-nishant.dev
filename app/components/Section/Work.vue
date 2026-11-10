@@ -3,8 +3,8 @@ const experiences = [
   {
     image: '/images/experience/bloomberg.webp',
     title: 'Bloomberg',
-    duration: 'Starting Nov 2026',
-    description: 'My upcoming full-time position as a Software Engineer working in C++.',
+    duration: 'Nov 2026 - Present',
+    description: 'My current full-time position as a Software Engineer.',
   },
   {
     image: '/images/experience/thetradedesk.jpg',
