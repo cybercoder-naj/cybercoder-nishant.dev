@@ -22,7 +22,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="bg-background text-foreground relative h-full overflow-y-scroll px-8 font-sans md:px-16 lg:px-28 xl:px-36 2xl:px-40"
+    class="bg-background text-foreground relative h-full overflow-y-scroll px-8 font-sans md:px-16 lg:px-28 xl:px-36 2xl:px-40 scroll-smooth"
     ref="scroll-container">
     <header class="bg-background fixed inset-x-8 top-0 z-50 md:inset-x-16 lg:inset-x-28 xl:inset-x-36 2xl:inset-x-40"
       ref="header">
@@ -32,6 +32,7 @@ onMounted(() => {
     <main class="h-dvh">
       <SectionHome class="h-screen w-full" />
       <SectionWork class="h-screen w-full" :style="{ 'padding-top': `${headerHeight}px` }" />
+      <SectionProjects class="h-screen w-full" :style="{ 'padding-top': `${headerHeight}px` }" />
     </main>
 
     <footer></footer>
