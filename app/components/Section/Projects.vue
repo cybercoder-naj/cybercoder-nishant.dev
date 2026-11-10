@@ -4,7 +4,24 @@
       Projects
     </template>
 
-    <div class="py-12">
+    <div class="py-12 grid grid-cols-3 grid-rows-3">
+      <div class="border-2 border-white row-start-1 col-span-2 px-6 py-4">
+        <div class="flex w-full justify-between gap-12">
+          <div>
+            <h2 class="text-4xl my-2 font-semibold">
+              IC Hack '25
+            </h2>
+            <p class="text-lg">
+              A hackathon organized by the DoCSoc at Imperial College London, where I was the Technical Lead.
+            </p>
+          </div>
+
+          <img src="/images/projects/ichack.png" alt="IC Hack '25" class="max-h-10" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="py-12">
       <InspiraCardSpotlight class="w-full" slotClass="p-8 w-full">
         <div class="flex w-full justify-between gap-12">
           <div class="flex flex-col justify-evenly gap-6">
@@ -25,6 +42,6 @@
           <img src="/images/projects/ichack.png" alt="IC Hack '25" class="w-96" />
         </div>
       </InspiraCardSpotlight>
-    </div>
+    </div> -->
   </MySection>
 </template>
