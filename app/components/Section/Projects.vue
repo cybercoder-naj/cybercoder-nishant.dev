@@ -25,8 +25,8 @@ const logos = [
       Projects
     </template>
 
-    <div class="py-12 grid grid-cols-3 grid-rows-3 gap-4 h-[85vh]">
-      <div class="border border-black dark:border-white col-span-2 relative isolate">
+    <div class="py-12 grid grid-cols-1 grid-rows-6 lg:grid-cols-3 lg:grid-rows-3 gap-4">
+      <div class="border border-black dark:border-white lg:col-span-2 relative isolate">
         <div class="absolute inset-0 bg-cover bg-center opacity-20"
           style="background-image: url('/images/projects/ichack.jpg');">
         </div>
@@ -41,24 +41,10 @@ const logos = [
             The website was built with Nuxt, Postgres, Docker, GitHub Actions, and more.
             Wrote extensive documentation while managing 5 volunteers.
           </p>
-
-          <!-- <div class="flex items-center gap-6">
-            <a href="https://ichack.org"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-white/75">
-              Visit project
-              <span aria-hidden="true">↗</span>
-            </a>
-
-            <a href="https://github.com/..."
-              class="inline-flex items-center gap-2 text-sm font-medium text-white/75 transition hover:text-white">
-              <Icon name="uil:github" class="size-4" />
-              GitHub
-            </a>
-          </div> -->
         </div>
       </div>
 
-      <div class="border border-black dark:border-white row-start-1 col-start-3 relative isolate">
+      <div class="border border-black dark:border-white lg:row-start-1 lg:col-start-3 relative isolate">
         <div class="absolute inset-0 bg-cover bg-center opacity-20"
           style="background-image: url('/images/projects/elysia.png');">
         </div>
@@ -76,7 +62,7 @@ const logos = [
         </div>
       </div>
 
-      <div class="border border-black dark:border-white row-start-2 col-start-1 relative isolate">
+      <div class="border border-black dark:border-white lg:row-start-2 lg:col-start-1 relative isolate">
         <div class="absolute inset-0 bg-cover bg-center opacity-20"
           style="background-image: url('/images/projects/gem5.png');">
         </div>
@@ -93,7 +79,7 @@ const logos = [
         </div>
       </div>
 
-      <div class="border border-black dark:border-white row-start-2 col-start-2 relative isolate">
+      <div class="border border-black dark:border-white lg:row-start-2 lg:col-start-2 relative isolate">
         <div class="absolute inset-0 bg-cover bg-center opacity-20"
           style="background-image: url('/images/projects/haskell.webp');">
         </div>
@@ -110,7 +96,7 @@ const logos = [
         </div>
       </div>
 
-      <div class="border border-black dark:border-white row-start-2 col-start-3 relative isolate">
+      <div class="border border-black dark:border-white lg:row-start-2 lg:col-start-3 relative isolate">
         <div class="absolute inset-0 bg-cover bg-center opacity-20"
           style="background-image: url('/images/projects/compose_multiplatform.jpg');">
         </div>
@@ -127,10 +113,20 @@ const logos = [
         </div>
       </div>
 
-      <div class="col-span-3 flex flex-col p-6 items-center justify-center gap-10">
+      <div class="lg:col-span-3 flex flex-col p-4 items-center justify-center gap-8">
         <h2 class="text-4xl">Technologies used in these Projects </h2>
 
-        <div class="flex gap-4">
+        <div class="lg:hidden">
+          <InspiraMarquee>
+            <div class="flex gap-4">
+              <a v-for="logo in logos" :key="logo.name" :href="logo.link" target="_blank" rel="noopener noreferrer"
+                :aria-label="logo.label" class="transition-transform hover:scale-110">
+                <Icon :name="logo.name" class="size-12" />
+              </a>
+            </div>
+          </InspiraMarquee>
+        </div>
+        <div class="flex gap-4 max-lg:hidden">
           <a v-for="logo in logos" :key="logo.name" :href="logo.link" target="_blank" rel="noopener noreferrer"
             :aria-label="logo.label" class="transition-transform hover:scale-110">
             <Icon :name="logo.name" class="size-12" />
