@@ -5,7 +5,7 @@
 		"@nuxt/a11y": "1.0.0-alpha.1",
 		"@nuxt/fonts": "0.14.0",
 		"@nuxt/icon": "2.3.1",
-		"@nuxtjs/color-mode": "4.0.1",
+		"@nuxtjs/color-mode": "4.1.0",
 		"@nuxtjs/seo": "^5.3.2",
 		"@tailwindcss/vite": "^4.3.5",
 		"@takumi-rs/core": "^2.10.0",
