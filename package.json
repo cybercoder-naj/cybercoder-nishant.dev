@@ -31,7 +31,7 @@
 	},
 	"type": "module",
 	"devDependencies": {
-		"@iconify-json/material-symbols": "^1.2.98",
+		"@iconify-json/material-symbols": "^1.2.99",
 		"@nuxt/nitro-server": "^4.6.4"
 	}
 }
