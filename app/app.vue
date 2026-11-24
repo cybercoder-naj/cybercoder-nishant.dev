@@ -6,9 +6,13 @@ useHead({
 useSeoMeta({
   description:
     "I'm Nishant Aanjaney Jalan (aka cybercoder). I'm a C++, full-stack web and android developer. Explore my experiences, my skills and my projects.",
-  keywords:
-    'cybercoder, Nishant Aanjaney Jalan, software engineer, C++, web developer, android developer, full-stack developer, portfolio'
 });
+
+useHead({
+  meta: [{
+    name: 'keywords', content: 'cybercoder, Nishant Aanjaney Jalan, software engineer, C++, web developer, android developer, full-stack developer, portfolio'
+  }]
+})
 
 const scrollContainer = useTemplateRef<HTMLDivElement>('scroll-container');
 provide(SCROLL_CONTAINER_KEY, scrollContainer);
