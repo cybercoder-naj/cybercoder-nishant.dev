@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { useWindowSize } from "@vueuse/core";
 
 interface InteractiveGridPatternProps {
   class?: HTMLAttributes["class"];
@@ -17,7 +18,11 @@ const {
   squaresClass: squaresClassName = "",
 } = defineProps<InteractiveGridPatternProps>();
 
-const horizontal = computed(() => squares[0]);
+const { width: screenWidth } = useWindowSize();
+
+const horizontal = computed(() =>
+  Math.max(squares[0], Math.ceil(screenWidth.value / width) + 2)
+);
 const vertical = computed(() => squares[1]);
 
 const totalSquares = computed(() => horizontal.value * vertical.value);
@@ -58,7 +63,7 @@ function handleMouseLeave() {
 </script>
 
 <template>
-  <svg :width.attr="gridWidth" :height.attr="gridHeight" :class="svgClass">
+  <svg :view-box="`0 0 ${gridWidth} ${gridHeight}`" preserve-aspect-ratio="none" :class="svgClass">
     <rect v-for="(_, index) in totalSquares" :key="index" :x.attr="getX(index)" :y.attr="getY(index)"
       :width.attr="width" :height.attr="height" :class="getRectClass(index)" @mouseenter="handleMouseEnter(index)"
       @mouseleave="handleMouseLeave" />
